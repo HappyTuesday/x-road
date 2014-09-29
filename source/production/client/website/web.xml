@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web>
+    <binding>
+        <ip></ip>
+        <port>80</port>
+    </binding>
+    <route>
+        <mapping url-patten="/customer" controller="Customer.Home" action="index"/>
+        <mapping url-patten="/customer/{0}" controller="Customer.{0}" action="index"/>
+        <mapping url-patten="/customer/{0}/{1}" controller="Customer.{0}" action="{1}"/>
+        <mapping url-patten="/master" controller="Master.Home" action="index"/>
+        <mapping url-patten="/master/{0}" controller="Master.{0}" action="index"/>
+        <mapping url-patten="/master/{0}/{1}" controller="Master.{0}" action="{1}"/>
+    </route>
+    <server>
+        <service-endpoint hostname="app01.x.com" port="1234"/>
+    </server>
+</web>
